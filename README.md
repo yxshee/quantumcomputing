@@ -107,6 +107,26 @@ jupyter notebook notebooks/
 - `[X]`: Pauli-X gate (quantum NOT)
 - `●`: Control for CNOT gate
 
+### Project Workflow
+
+Below is a high-level workflow of how this repository is structured and how data/code flows through the main components:
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Preprocessing (utils.py/.m)]
+    B --> C[Quantum Circuit Construction (circuits/)]
+    C --> D[Simulation/Execution (Qiskit, simulators)]
+    D --> E[Results Analysis (notebooks/)]
+    E --> F[Visualization & Interpretation]
+    F --> G[End]
+```
+
+- **Preprocessing:** Prepare data or parameters for quantum circuits.
+- **Quantum Circuit Construction:** Build quantum circuits using code samples.
+- **Simulation/Execution:** Run circuits on simulators or real quantum hardware.
+- **Results Analysis:** Analyze output using notebooks and scripts.
+- **Visualization & Interpretation:** Visualize results and interpret findings.
+
 ---
 
 ## 🤝 Contributing
