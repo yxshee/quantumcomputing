@@ -113,7 +113,7 @@ Below is a high-level workflow of how this repository is structured and how data
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Preprocessing (utils.py/.m)]
+    A[Start] --> B[Preprocessing (utils.py)]
     B --> C[Quantum Circuit Construction (circuits/)]
     C --> D[Simulation/Execution (Qiskit, simulators)]
     D --> E[Results Analysis (notebooks/)]
