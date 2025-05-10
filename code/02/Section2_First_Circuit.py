@@ -4,7 +4,13 @@ Section 2 – First Quantum Circuit with Qiskit
 
 Creates a single‑qubit circuit (|0⟩ → X → |1⟩) and measures it.
 """
-from qiskit import QuantumCircuit, Aer, execute
+# Add import check for qiskit
+try:
+    from qiskit import QuantumCircuit, transpile
+    from qiskit.providers.aer import AerSimulator
+except ImportError:
+    print("qiskit is not installed. Please install it with `pip install qiskit`.")
+    exit(1)
 
 def build_circuit():
     qc = QuantumCircuit(1, 1)
@@ -14,9 +20,12 @@ def build_circuit():
 
 def main(shots=1024):
     qc = build_circuit()
-    backend = Aer.get_backend('qasm_simulator')
-    job = execute(qc, backend=backend, shots=shots)
-    counts = job.result().get_counts()
+    simulator = AerSimulator()
+    qc = transpile(qc, simulator)
+    job = simulator.run(qc, shots=shots)
+    result = job.result()
+    counts = result.get_counts()
+
     print("Circuit:")
     print(qc)
     print(f"Results for {shots} shots:", counts)
