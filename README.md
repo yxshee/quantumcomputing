@@ -1,6 +1,10 @@
+<img src="https://github.com/user-attachments/assets/c0509b0e-f2fe-47a2-b534-d8747bd15d6a" width="303" height="303">
+
+
+
+
 # Quantum Computing
 
-Welcome to the **Quantum Computing** repository!  
 This project explores the fundamentals and applications of quantum computing, providing code samples, explanations, and visualizations to help you understand this cutting-edge field.
 
 ---
