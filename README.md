@@ -1,7 +1,3 @@
-<img src="https://github.com/user-attachments/assets/c0509b0e-f2fe-47a2-b534-d8747bd15d6a" width="303" height="303">
-
-
-
 
 # Quantum Computing
 
